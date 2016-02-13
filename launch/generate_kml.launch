@@ -1,0 +1,15 @@
+<!--
+Owner: Silvio Maeta
+NOTES:
+-->
+<launch>
+
+    <!-- Generate plots using odometry data -->
+    <node name="generate_kml" pkg="kml_util" type="generate_kml.py" output="screen">
+        <param name="output_filename" value="/home/smaeta/projects/aacus/odometry_kml_trajectory.kml"/>
+        <param name="pose_topic" value="/pose_estimation/pose" />
+        <param name="utm_zone_number" value="17"/>
+    </node>
+
+</launch>
+
